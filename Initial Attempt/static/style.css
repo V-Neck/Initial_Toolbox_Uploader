@@ -1,0 +1,43 @@
+body {
+   font-family: Roboto;
+   margin-left: 30%;
+   margin-right: 30%
+}
+
+header{
+   padding: 2em;
+   margin: auto;
+   display: float;
+   display: block;
+   text-align: center;
+}
+
+input{
+   text-align: center;
+   font-size: 1.1em;
+   display: block;
+}
+
+.submit{
+   margin: auto;
+   border: none;
+   background-color: #FF0088;
+   color: white;
+   float: right;
+}
+
+#submit_button:hover{
+   background-color: #FF55AA;
+}
+
+#submit_button:disabled{
+   background-color: #DDDDDD;
+}
+
+#instruction{
+   text-align: center;
+}
+
+.mkrs{
+   //text-align: right;
+}

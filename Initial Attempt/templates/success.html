@@ -1,0 +1,30 @@
+<html>
+   <head>
+      <title>Upload Success!</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <!--currently doesn't work. Need to find how to READ files client-side-->
+      <script type=text/javascript src="{{url_for('static', filename='validate.js') }}"></script>
+   <head>
+   <header>
+      <h1>Your Toolbox file uploaded successfully!</h1>
+   </header>
+   <body>
+         <a href="http://127.0.0.1:5000/upload" >
+            <button  class="submit">Submit Again</button>
+         </a>
+         <table id="marker_table">
+            <h3>Your markers</h3>
+            {% for pair in pairs %}
+               <tr><td class="mkrs"> {{pair[0]}} </td> <td> {{mkr_format[pair[0]]}}</td></tr>
+            {% endfor %}
+         </table>
+
+         <table id="sample_table">
+            <h3>Sample from file</h3>
+            {% for pair in pairs %}
+               <tr> <td> {{pair[1]}} </td> <td class="mkrs"> {{mkr_format[pair[0]]}}</td> </li>
+            {% endfor %}
+         </table>
+   </body>
+</html>

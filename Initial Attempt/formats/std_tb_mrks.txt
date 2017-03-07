@@ -1,0 +1,6 @@
+\ref,reference
+\t,text
+\m,morphemes
+\g,gloss
+\l,literal translation
+\f,free translation
