@@ -1,14 +1,16 @@
 import os, random, toolbox, re
 from flask import Flask, request, render_template, url_for
-UPLOAD_FOLDER = "uploads"
+
+UPLOAD_FOLDER = "temp"
 CHARS = "abcdefghijklmnopqrstuvwxyz0123456789"
 TOOLBOX_LINE_PATTERN = re.compile(r"^\\[a-z]+")
-TB_STD_MKR_DIR = "formats/std_tb_mrks.txt"
-TOOLBOX_STD_MKR = dict([line.split(",") for line in open(TB_STD_MKR_DIR).readlines()])
-"""Error Codes:
-    Code | Reason
-    42   | Non standard maker
-"""
+TOOLBOX_STD_MKR = {'\\t': 'text',
+    '\\ref': 'reference',
+    '\\f': 'free translation',
+    '\\g': 'gloss',
+    '\\l': 'literal translation',
+    '\\m': 'morphemes'}
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -22,7 +24,6 @@ def upload(name=None):
 
         lines = toolbox.read_toolbox_file(open(path))
         records = toolbox.records(lines, ['\\id', '\\ref'])
-        #TODO better understand what's going on here
         rec1 = next(records)
         pairs = [_ for _ in toolbox.normalize_record(rec1[1], ['\\t', '\\g', '\\m'])]
 
@@ -45,6 +46,7 @@ def rand_string(path, N):
 
     return file_name
 
+#determines whether the user used standard keys
 def uses_std_mkrs(mkrs):
     for mkr in mkrs:
         if mkr not in TOOLBOX_STD_MKR.keys():
@@ -54,7 +56,7 @@ def uses_std_mkrs(mkrs):
 def get_odd_mkrs(mkrs):
     non_std_mkrs = []
     for mkr in mkrs:
-        if mkr not in TOOLBOX_STD_MKR.keys():
+        if mkr not in TOOLBOX_STD_MKR:
             print mkr
             non_std_mkrs.append(mkr)
     return non_std_mkrs
