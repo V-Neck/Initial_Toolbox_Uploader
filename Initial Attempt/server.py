@@ -1,7 +1,8 @@
-import os, random, toolbox, re
+import os, random, toolbox, re, tempfile
 from flask import Flask, request, render_template, url_for
 
 UPLOAD_FOLDER = "temp"
+tempfile.tempdir = UPLOAD_FOLDER
 CHARS = "abcdefghijklmnopqrstuvwxyz0123456789"
 TOOLBOX_LINE_PATTERN = re.compile(r"^\\[a-z]+")
 TOOLBOX_STD_MKR = {'\\t': 'text',
@@ -23,6 +24,8 @@ def upload(name=None):
         toolbox_file.save(path)
 
         lines = toolbox.read_toolbox_file(open(path))
+        #Hacky solution to temporary file problem
+        os.remove(path)
         records = toolbox.records(lines, ['\\id', '\\ref'])
         rec1 = next(records)
         pairs = [_ for _ in toolbox.normalize_record(rec1[1], ['\\t', '\\g', '\\m'])]
@@ -60,6 +63,9 @@ def get_odd_mkrs(mkrs):
             print mkr
             non_std_mkrs.append(mkr)
     return non_std_mkrs
+
+def find_delimiter(lines):
+    pass
 
 if __name__ == "__main__":
     app.run(debug=True)
