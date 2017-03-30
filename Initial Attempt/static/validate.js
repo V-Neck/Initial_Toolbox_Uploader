@@ -16,7 +16,7 @@ $(document).ready(function(){
          var contents = event.target.result;
          var fileSize = contents.length;
 
-         if( !isToolboxFile(file.name.split('.').pop())){
+         if( !isToolboxFileName(file.name)){
             $("#submit_button").prop("disabled", true);
             alert("File must use .txt extension");
          }
@@ -28,7 +28,7 @@ $(document).ready(function(){
 
          else if( !isToolboxFormat(contents) ){
             $("#submit_button").prop("disabled", true);
-            alert("The file selected doesn't look like a toolbox file!");
+            alert("The selected file's format doesn't look like toolbox data!");
          }
 
          else{
@@ -53,14 +53,9 @@ $(document).ready(function(){
    }
 
    //Checks file-extension is acceptable
-   function isToolboxFile(fileExtension){
-      var acceptableFormats = ['txt'];
+   function isToolboxFileName(fileExtension){
+      var acceptableFormats = /(([A-Za-z_]*\.)+(txt|TXT)+|[A-Za-z_]+^.)/;
 
-      for(var i=0; i< acceptableFormats.length; i++){
-         if (fileExtension == acceptableFormats[i]){
-            return true;
-         }
-      }
-      return false;
+      return fileExtension.match(acceptableFormats);
    }
 });
