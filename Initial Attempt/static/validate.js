@@ -1,6 +1,12 @@
 $(document).ready(function(){
    var toolboxPat = /\\[A-Za-z]+ \w+/;
    var MB_SIZE = Math.pow(10,6);
+   var stdMkrs = ["\\t ",
+                  "\\ref ",
+                  "\\f ",
+                  "\\g ",
+                  "\\l ",
+                  "\\m "];
 
    $("#submit_button").prop("disabled", true);
    $("#file-submission").on("change", getFileText);
@@ -34,6 +40,12 @@ $(document).ready(function(){
          else{
                $("#submit_button").prop("disabled", false);
          }
+
+         var markers = getMarkers(contents);
+         var usedStdMkrs = setEq(markers, stdMkrs);
+         console.log(usedStdMkrs);
+
+
       };
       reader.readAsText(file);
    }
@@ -58,4 +70,46 @@ $(document).ready(function(){
 
       return fileExtension.match(acceptableFormats);
    }
+
+   function getMarkers(contents){
+      var markerFormat = /\\[A-Za-z_]+ /g;
+      return Array.from(new Set(contents.match(markerFormat)));
+   }
+
+   function setEq(s1, s2){
+      if (s1.length !== s2.length){
+         return false;
+      }
+
+      var flag = true;
+
+      for (var i=0; i< s1.length; i++){
+         for (var j=0; j< s2.length; j++){
+            if(s1[i] == s2[j]){
+               flag = false;
+            }
+         }
+      }
+
+      if (flag){
+         return false;
+      }
+
+      flag = true;
+
+      for (var i=0; i< s2.length; i++){
+         for (var j=0; j< s1.length; j++){
+            if(s1[j] == s2[i]){
+               flag = false;
+            }
+         }
+      }
+
+      if (flag){
+         return false;
+      }
+
+      return true;
+   }
+
 });
