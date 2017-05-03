@@ -1,0 +1,39 @@
+<html>
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script type=text/javascript src="../static/combo.js"></script>
+   <link rel="stylesheet" href="../static/style.css">
+</head>
+<h2>Your toolbox file used the following markers</h2>
+<table>
+{% for mkr in markers %}
+   <tr>{{mkr}}</tr>
+{% endfor %}
+</table>
+<h2>Could you clarify their intended interpretation?</h2>
+<form id="marker-checker" method="post" enctype="multipart/form-data">
+   <table>
+      <tr>
+         <th>Your marker</th>
+         <th>Interpretation</th>
+      </tr>
+      {% for mkr in markers %}
+         <tr class={{mkr}}>
+            <td>{{mkr}}</td>
+            <td>
+               <select class="dropdown-choice"  name={{mkr}}>
+                  {% for interp in TB_STD_MKR_INTERP %}
+                     <option value={{interp}}>{{interp}}</option>
+                  {% endfor %}
+                     <option value="other">other</option>
+               </select>
+            </td>
+            <td class="other">
+               <input class={{mkr[1:]}} type="text"></option>
+            </td>
+         </tr>
+      {% endfor %}
+   </table>
+   <input id="submit_button" class=".submit" type="submit"></input>
+</form>
+<html>

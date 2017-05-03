@@ -1,0 +1,63 @@
+\ref item1
+\laksjalskdjf O        Pedro baixou
+\aslkdjflj O        Pedro bai   -xou
+\jaos the.M.SG Pedro lower -PST.IND.3SG
+\laksjalskdjf a        bola
+\aslkdjflj a        bola
+\jaos the.F.SG ball.F.SG
+\f Pedro calmed down.
+\l Pedro lowered the ball.
+\ALSKDJF the.F.SG ball.F.SG
+\alskfjlkee Pedro calmed down.
+\alksfjovmw Pedro lowered the ball.
+
+
+\ref item1
+\laksjalskdjf O        Pedro baixou
+\aslkdjflj O        Pedro bai   -xou
+\jaos the.M.SG Pedro lower -PST.IND.3SG
+\laksjalskdjf a        bola
+\aslkdjflj a        bola
+\jaos the.F.SG ball.F.SG
+\f Pedro calmed down.
+\l Pedro lowered the ball.
+
+\ref item1
+\laksjalskdjf O        Pedro baixou
+\aslkdjflj O        Pedro bai   -xou
+\jaos the.M.SG Pedro lower -PST.IND.3SG
+\laksjalskdjf a        bola
+\aslkdjflj a        bola
+\jaos the.F.SG ball.F.SG
+\f Pedro calmed down.
+\l Pedro lowered the ball.
+
+\ref item1
+\laksjalskdjf O        Pedro baixou
+\aslkdjflj O        Pedro bai   -xou
+\jaos the.M.SG Pedro lower -PST.IND.3SG
+\laksjalskdjf a        bola
+\aslkdjflj a        bola
+\jaos the.F.SG ball.F.SG
+\f Pedro calmed down.
+\l Pedro lowered the ball.
+
+\ref item1
+\laksjalskdjf O        Pedro baixou
+\aslkdjflj O        Pedro bai   -xou
+\jaos the.M.SG Pedro lower -PST.IND.3SG
+\laksjalskdjf a        bola
+\aslkdjflj a        bola
+\jaos the.F.SG ball.F.SG
+\f Pedro calmed down.
+\l Pedro lowered the ball.
+
+\ref item1
+\laksjalskdjf O        Pedro baixou
+\aslkdjflj O        Pedro bai   -xou
+\jaos the.M.SG Pedro lower -PST.IND.3SG
+\laksjalskdjf a        bola
+\aslkdjflj a        bola
+\jaos the.F.SG ball.F.SG
+\f Pedro calmed down.
+\l Pedro lowered the ball.

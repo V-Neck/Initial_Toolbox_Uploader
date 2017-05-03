@@ -1,0 +1,36 @@
+Questions:
+   temporary files, how do they work?
+	use mkd
+	use mkstemp to get filename
+		
+   how to get ref into pairs
+	Don’t worry
+	
+   should I concern myself with delimeters before xigt?
+      do people use inconsistent markers within one document?
+   are my tests adequate?
+   user interface thingy
+      radio buttons ok?
+		combo boxes
+      do we want to default?
+      How do we guess?
+	for teh time 
+
+Change “.txt” file message
+fix the filename checker
+	no extension
+	filename is txt  : check
+	abc.def.txt : check
+	abc.txt.jpg
+	abc.TXT
+	act.txt : check
+
+go with fast & dirty
+
+swap over to js
+
+Make javascript dictionary convention dictiary
+
+MAKE DICTIONARY OF TOOLBOX MARKERS MAPPED TO XIGT ALIGHENMNT 
+	INCLUDE POS
+

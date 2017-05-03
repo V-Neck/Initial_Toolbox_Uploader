@@ -1,0 +1,8 @@
+1.) Is order part of the Toolbox stnadard markers?
+2.) Should we build a dir of toolbox marker templates?
+3.) Add file extension to check
+4.) Add better delimiter checking
+5.) Find better home for standard igt format
+6.) Generate json config file
+   read documentation
+7.) Read temporary file generator

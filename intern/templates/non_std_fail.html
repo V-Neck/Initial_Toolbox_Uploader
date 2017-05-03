@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <title>Upload Success!</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <!--currently doesn't work. Need to find how to READ files client-side-->
+      <script type=text/javascript src="{{url_for('static', filename='validate.js') }}"></script>
+   <head>
+   <header>
+      <h1>Upload Fail</h1>
+   </header>
+   <body>
+
+      <h3><p>You used the non-standard Toolbox Markers: </p></h3>
+      <ul>
+         {% for mkr in non_std_mkrs %}
+            <li>{{mkr}}</li>
+         {% endfor %}
+      </ul>
+
+      <h4> These are the standard Toolbox makers </h4>
+      <table>
+         {% for mkr in mkr_format.keys() %}
+            <tr><td> {{mkr}} </td><td class="mkrs"> {{mkr_format[mkr]}}</td></li>
+         {% endfor %}
+      </table>
+
+      <a href="http://127.0.0.1:5000/upload" >
+         <button  class="submit">Submit Again</button>
+      </a>
+   </body>
+</html>

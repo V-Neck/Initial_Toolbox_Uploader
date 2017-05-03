@@ -1,0 +1,68 @@
+body {
+   font-family: Roboto;
+   margin-left: 30%;
+   margin-right: 30%
+}
+
+header{
+   padding: 2em;
+   margin: auto;
+   display: float;
+   display: block;
+   text-align: center;
+}
+
+.submit{
+   margin: auto;
+   border: none;
+   background-color: #FF0088;
+   color: white;
+   display: block;
+   float: right;
+}
+
+td, th{
+   padding-left: .5em;
+   padding-right: .5em;
+}
+
+.submit:hover{
+   background-color: #FF55AA;
+}
+
+.submit:disabled{
+   background-color: #DDDDDD;
+}
+
+#instruction{
+   text-align: center;
+}
+
+#yay{
+   font-size: 40em;
+}
+
+.left-aligned{
+   text-align: left;
+}
+
+.right-aligned{
+   text-align: right;
+}
+
+#agreement-text{
+   border: 1px solid #DDD;
+   padding-bottom: 1em;
+   height: 5em;
+   overflow: scroll;
+}
+
+.user-agreement{
+   float: right;
+   margin: auto;
+}
+
+#agreement{
+   display: block;
+   padding-bottom: 3em;
+}

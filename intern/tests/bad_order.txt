@@ -1,0 +1,9 @@
+\ref item1
+\m O        Pedro bai   -xou
+\t O        Pedro baixou
+\g the.M.SG Pedro lower -PST.IND.3SG
+\m a        bola
+\t a        bola
+\g the.F.SG ball.F.SG
+\l Pedro lowered the ball.
+\f Pedro calmed down.
